@@ -1,3 +1,3 @@
 module.exports = {
-    "URI": "mongodb://localhost/admin"
+    "URI": "mongodb://localhost/COMP225-Assignment2"
 }
