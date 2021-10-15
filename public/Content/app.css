@@ -1,0 +1,113 @@
+/*
+    File name: app.css
+    Student: Gabriel Dias Tinoco
+    StudentID: 301160373
+    Date: 10/01/21
+*/
+
+/* CSS HTML objects */
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type=text] {
+    margin: 0 0 8px 0;
+}
+
+/* @media queries for screen sizes */
+@media only screen and (min-width: 400px) {
+    
+    /* CSS classes */
+    .main-container {
+        background-color: rgb(253, 253, 253);
+        margin: 0 10px 100px 10px;
+        padding: 0 20px 20px 20px;
+        height: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    
+    /* CSS classes */
+    .main-container {
+        background-color: rgb(253, 253, 253);
+        margin: 0 30px 100px 30px;
+        padding: 0 20px 20px 20px;
+        height: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    
+    /* CSS classes */
+    .main-container {
+        background-color: rgb(253, 253, 253);
+        margin: 0 75px 100px 75px;
+        padding: 0 20px 20px 20px;
+        height: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    
+    /* CSS classes */
+    .main-container {
+        background-color: rgb(253, 253, 253);
+        margin: 0 150px 100px 150px;
+        padding: 0 20px 20px 20px;
+        height: 100%;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* CSS classes */
+.main-container {
+    background-color: rgb(253, 253, 253);
+    padding: 0 20px 20px 20px;
+    height: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.circular-container {
+    border-radius: 200px 200px 200px 200px;
+}
+
+.flex-item {
+    padding: 10px;
+}

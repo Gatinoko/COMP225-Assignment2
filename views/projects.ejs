@@ -1,0 +1,57 @@
+<%- include partials/head.ejs %>
+<%- include partials/main_nav.ejs %>
+
+  <!-- Main -->
+<main class="main-container">
+
+  <!-- Jumbotron -->
+  <div class="jumbotron ">
+    <h1 class="display-4"><%= title %> page</h1>
+  </div>
+
+  <!-- Content -->
+  <div class="flex-container">
+
+    <!-- Image -->
+    <img class="flex-item" height="150em" width="400em" src="/Assets/images/p1.png" style="border-radius: 15px 15px 15px 15px;">
+
+    <!-- Text-->
+    <div class="flex-item" style="display:inline-block;">
+      <p>
+        This is a website that uses OpenWeather's API to get weather based on city name, or your device's geographical location.
+      </p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="flex-container">
+
+    <!-- Image -->
+    <img class="flex-item" height="175em" width="350em" src="/Assets/images/p2.png" style="border-radius: 15px 15px 15px 15px;">
+
+    <!-- Text-->
+    <div class="flex-item" style="display:inline-block;">
+      <p>
+        This is a simple game browser game made using client-side javascript. The bug appearing on the screen keeps constantly jumping in a set
+        interval of time, and each time you're able to catch it, the speed increases and your score goes up.
+      </p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="flex-container">
+
+    <!-- Image -->
+    <img class="flex-item" height="200em" width="300em" src="/Assets/images/p3.png" style="border-radius: 15px 15px 15px 15px;">
+
+    <!-- Text-->
+    <div class="flex-item" style="display:inline-block;">
+      <p>
+        This is a simple form that has custom Javascript based validation for all fields.
+      </p>
+    </div>
+  </div>
+</main>
+  
+<%- include partials/footer.ejs %>  
+<%- include partials/script_declarations.ejs %>
