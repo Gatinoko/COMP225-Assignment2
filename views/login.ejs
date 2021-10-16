@@ -1,0 +1,36 @@
+<%- include partials/head.ejs %>
+<%- include partials/main_nav.ejs %>
+
+  <!-- Main Content -->
+  <main class="main-container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron ">
+      <h1 class="display-4"><%= title %> page</h1>
+    </div>
+
+    <!-- Login form -->
+    <form class="flex-container" style="flex-direction: column; align-items: center;">
+
+      <!-- Required information -->
+      <div class="flex-container flex-item" style="flex-direction: column;">
+        <label for="Username">Username:</label>
+        <input class="form-control" type="text" name="Username" required>
+        <label for="Password">Passsword:</label>
+        <input class="form-control" type="password" name="Password" required>
+      </div>
+
+      <!-- Login button -->
+      <div class="flex-item">
+        <input type="button" value="Login">
+      </div>
+    </form>
+  </main>
+  
+<%- include partials/footer.ejs %>  
+<%- include partials/script_declarations.ejs %>
+  
+
+
+
+
