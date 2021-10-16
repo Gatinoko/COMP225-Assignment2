@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET users listing. */
-router.get('/ass', function(req, res, next) {
-  res.send('ASSHOLE');
+router.get('/login', function(req, res, next) {
+  res.render('login', { title: 'Login' });
 });
 
 module.exports = router;
