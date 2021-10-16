@@ -1,0 +1,47 @@
+<%- include partials/head.ejs %>
+<%- include partials/main_nav.ejs %>
+
+  <!-- Main Content -->
+  <main class="main-container">
+
+    <!-- Jumbotron -->
+    <div class="jumbotron ">
+      <h1 class="display-4"><%= title %> page</h1>
+    </div>
+
+    <!-- Contacts table -->
+    <table class="table">
+
+      <!-- Table header-->
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Number</th>
+          <th scope="col">Options</th>
+        </tr>
+      </thead>
+
+      <!-- Table body -->
+      <tbody>
+
+        <!-- Repeatable table row -->
+        <% for( let i = 0; i < contactList.length; i++ ) { %>
+          <tr>
+            <td><%= contactList[i].name %></td>
+            <td><%= contactList[i].email %></td>
+            <td><%= contactList[i].number %></td>
+            <td><a class="btn btn-primary" href="business-contacts/update" role="button">Update</a></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </main>
+  
+<%- include partials/footer.ejs %>  
+<%- include partials/script_declarations.ejs %>
+  
+
+
+
+
