@@ -1,0 +1,26 @@
+<%- include partials/head.ejs %>
+<%- include partials/main_nav.ejs %>
+
+<!-- Main  -->
+<main class="main-container">
+
+  <!-- Jumbotron -->
+  <div class="jumbotron ">
+    <h1 class="display-4"><%= title %> page</h1>
+  </div>
+
+  <!-- Form -->
+  <form class="flex-container needs-validation" method="POST" style="width: 100%; flex-direction: column; align-items: center;">
+
+    <!-- Required information -->
+    <div class="flex-item user-input-sections" style="display: flex; flex-direction: column;">
+      <label for="contactName">Name: </label> <input class="form-control" type="text" name="contactName" style="width: auto;" value="<%= contact.name %>" required>
+      <label for="contactEmail">Email: </label> <input class="form-control" type="text" name="contactEmail" value="<%= contact.email %>" required>
+      <label for="contactNumber">Number: </label> <input class="form-control" type="tel" name="contactNumber" value="<%= contact.number %>" required>
+    </div>
+    <input id="SubmitButton" type="submit" value="Submit" style="margin: 10px 10px 10px 10px;">
+  </form>
+</main>
+  
+<%- include partials/footer.ejs %>  
+<%- include partials/script_declarations.ejs %>
