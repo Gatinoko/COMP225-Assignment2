@@ -31,7 +31,7 @@
             <td><%= contactList[i].name %></td>
             <td><%= contactList[i].email %></td>
             <td><%= contactList[i].number %></td>
-            <td><a class="btn btn-primary" href="business-contacts/update" role="button">Update</a></td>
+            <td><a class="btn btn-primary" href="business-contacts/update/<%= contactList[i]._id %>" role="button">Update</a></td>
           </tr>
         <% } %>
       </tbody>
