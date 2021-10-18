@@ -14,12 +14,27 @@ module.exports.displayBusinessContactsPage = (req, res, next) => {
         }
         else
         {
-            res.render('businessContacts', {title: 'Business Contacts', contactList: contactList})           
+            res.render('businessContacts', {title: 'Business Contacts', contactList: contactList, username: req.user ? req.user.username : '' })           
         }
   });
 };
 
-/* GET updateBusinessContact page. */
+module.exports.processDeleteOption = (req, res, next) => {
+  let id = req.params.id;
+  
+  contact.deleteOne({_id: id}, (err) => {
+    if(err)
+    {
+      return console.error(err);
+    }
+    else
+    {
+      res.redirect("/users/business-contacts")
+    }
+  })
+}
+
+/* GET/POST updateBusinessContact page. */
 module.exports.displayUpdatePage = (req, res, next) => {
   let id = req.params.id;
   contact.findById(id, (err, contactToUpdate) => {
@@ -29,11 +44,10 @@ module.exports.displayUpdatePage = (req, res, next) => {
         }
         else
         {
-          res.render('updateBusinessContact', { title: 'Update', contact: contactToUpdate });        
+          res.render('updateBusinessContact', { title: 'Update', contact: contactToUpdate, username: req.user ? req.user.username : '', id: req.params.id });        
         }
   });
 };
-
 module.exports.processUpdatePage = (req, res, next) => {
   let id = req.params.id;
 
