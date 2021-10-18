@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
   <!-- Navigation bar logo -->
-  <a class="navbar-brand" href="/"><img src="./Assets/images/GlogoTransparent.png" height="50px"></a>
+  <a class="navbar-brand" href="/"><img src="/Assets/images/GlogoTransparent.png" height="50px"></a>
 
   <!-- Dropdown menu for the compact navigation bar -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,13 +59,31 @@
         <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact </a>
       </li>
 
-      <!-- Login navigation item-->
-      <% if (title == "Login") { %>
-        <li class="nav-item active">
+      <!-- Business contacts navigation item-->
+      <% if (typeof username == 'string' && username) { %>
+        <% if (title == "Business Contacts") { %>
+          <li class="nav-item active">
         <% } else  { %>
-        <li class="nav-item">
+          <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login </a>
+            <a class="nav-link" href="/users/business-contacts"><i class="fas fa-address-book"></i> Business Contacts </a>
+          </li>
+      <% } %>
+
+      <!-- Login/Logout navigation items-->
+      <% if (!(typeof username == 'string' && username)) { %>
+        <!-- Login navigation item -->
+        <% if (title == "Login") { %>
+          <li class="nav-item active">
+          <% } else  { %>
+          <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i> Login </a>
+          </li>
+      <% } else { %>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Logout </a>
         </li>
+      <% } %>
   </div>
 </nav>
