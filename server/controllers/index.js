@@ -7,27 +7,27 @@ let user = userModel.userModel; // alias
 
 /* GET home page. */
 module.exports.displayHomePage = (req, res, next) => {
-  res.render('index', { title: 'Home' });
+  res.render('index', { title: 'Home', username: req.user ? req.user.username : '' });
 }
 
 /* GET about page. */
 module.exports.displayAboutPage = (req, res, next) => {
-  res.render('about', { title: 'About' });
+  res.render('about', { title: 'About', username: req.user ? req.user.username : '' });
 }
 
 /* GET projects page. */
 module.exports.displayProjectsPage = (req, res, next) => {
-  res.render('projects', { title: 'Projects' });
+  res.render('projects', { title: 'Projects', username: req.user ? req.user.username : '' });
 }
 
 /* GET services page. */
 module.exports.displayServicesPage = (req, res, next) => {
-  res.render('services', { title: 'Services' });
+  res.render('services', { title: 'Services', username: req.user ? req.user.username : '' });
 }
 
 /* GET contact page. */
 module.exports.displayContactPage = (req, res, next) => {
-  res.render('contact', { title: 'Contact' });
+  res.render('contact', { title: 'Contact', username: req.user ? req.user.username : '' });
 }
 
 /* GET/POST login page. */
@@ -65,7 +65,6 @@ module.exports.processLoginPage = (req, res, next) => {
       {
         return next(err);
       }
-
       res.redirect('users/business-contacts');
     });
   })(req, res, next);
