@@ -15,6 +15,7 @@ function requireAuth(req, res, next) {
 
 /* GET business contacts page. */
 router.get('/business-contacts', requireAuth, usersController.displayBusinessContactsPage);
+router.get('/business-contacts/delete/:id', requireAuth, usersController.processDeleteOption);
 
 /* GET/POST edit business contacts page. */
 router.get('/business-contacts/update/:id', requireAuth, usersController.displayUpdatePage);
