@@ -20,7 +20,14 @@ router.get('/services', indexController.displayServicesPage);
 /* GET contact page. */
 router.get('/contact', indexController.displayContactPage);
 
-/* GET login listing. */
+/* GET/POST login page. */
 router.get('/login', indexController.displayLoginPage);
+router.post('/login', indexController.processLoginPage);
+
+/* GET logout */
+router.get('/logout', indexController.performLogout);
+
+//router.get('/register', indexController.displayRegisterPage)
+//router.post('/register', indexController.processRegisterPage)
 
 module.exports = router;
