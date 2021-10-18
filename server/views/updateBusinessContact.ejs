@@ -18,7 +18,11 @@
       <label for="contactEmail">Email: </label> <input class="form-control" type="text" name="contactEmail" value="<%= contact.email %>" required>
       <label for="contactNumber">Number: </label> <input class="form-control" type="tel" name="contactNumber" value="<%= contact.number %>" required>
     </div>
-    <input id="SubmitButton" type="submit" value="Submit" style="margin: 10px 10px 10px 10px;">
+    <div style="margin: 10px 0 0 0;">
+      <input class="btn btn-primary" id="SubmitButton" type="submit" value="Submit">
+      <a class="btn btn-secondary" href="/users/business-contacts" role="button">Cancel</a>
+      <a class="btn btn-danger" href="/users/business-contacts/delete/<%= id %> " role="button">Delete</a>
+    </div>
   </form>
 </main>
   
