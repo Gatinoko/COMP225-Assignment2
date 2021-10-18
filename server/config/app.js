@@ -1,10 +1,17 @@
-// installed 3rd party packages
+//Installed 3rd party packages
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let mongoose = require('mongoose');
+
+//Authentication modules
+let session = require('express-session');
+let passport = require('passport');
+let passportLocal = require('passport-local');
+let localStrategy = passportLocal.Strategy;
+let flash = require('connect-flash');
 
 //Database setup
 let DB = require('./db');
@@ -14,7 +21,6 @@ mongoDB.on('error', console.error.bind(console, 'Connection Error'));
 mongoDB.once('open', ()=>{
   console.log('Connected to MongoDB...')
 });
-
 
 //Server routes
 let indexRouter = require('../routes/index');
@@ -32,6 +38,29 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
+
+//Setup express session
+app.use(session({
+  secret: "ass",
+  saveUnitialized: false,
+  resave: false
+}));
+
+//Setup flash
+app.use(flash());
+
+//Setup passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Setup passport user configuration
+let userModel = require('../models/user');
+let user = userModel.userModel;
+//Implement a user authentication strategy
+passport.use(user.createStrategy());
+//Serialize and deserialize the user info
+passport.serializeUser(user.serializeUser());
+passport.deserializeUser(user.deserializeUser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
