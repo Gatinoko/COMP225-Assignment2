@@ -31,7 +31,12 @@
             <td><%= contactList[i].name %></td>
             <td><%= contactList[i].email %></td>
             <td><%= contactList[i].number %></td>
-            <td><a class="btn btn-primary" href="business-contacts/update/<%= contactList[i]._id %>" role="button">Update</a></td>
+
+            <!-- Update and delete buttons -->
+            <td>
+              <a class="btn btn-primary" href="business-contacts/update/<%= contactList[i]._id %>" role="button">Update</a>
+              <a class="btn btn-danger" href="business-contacts/delete/<%= contactList[i]._id %>" role="button">Delete</a>
+            </td>
           </tr>
         <% } %>
       </tbody>
