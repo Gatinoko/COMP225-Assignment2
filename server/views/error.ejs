@@ -1,14 +1,11 @@
-<%- include partials/header.ejs %>
-
+<%- include partials/head.ejs %>
 <%- include partials/main_nav.ejs %>
 
-<div class="container">
-    <h1><%= message %></h1>
-    <h2><%= error.status %></h2>
-    <pre><%= error.stack %></pre>
+<div class="container" style="color: white;">
+    <h1 style="color: white;"><%= message %></h1>
+    <h2 style="color: white;"><%= error.status %></h2>
+    <pre style="color: white;"><%= error.stack %></pre>
 </div>
 
-
-<%- include partials/bottom_nav.ejs %>
-
 <%- include partials/footer.ejs %>
+<%- include partials/script_declarations.ejs %>
