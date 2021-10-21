@@ -1,3 +1,10 @@
+/*
+    File name: users.js
+    Student: Gabriel Dias Tinoco
+    StudentID: 301160373
+    Date: 21-Oct-21
+*/
+
 var express = require('express');
 var router = express.Router();
 let mongoose = require('mongoose');

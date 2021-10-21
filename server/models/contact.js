@@ -1,3 +1,10 @@
+/*
+    File name: contact.js
+    Student: Gabriel Dias Tinoco
+    StudentID: 301160373
+    Date: 21-Oct-21
+*/
+
 let mongoose = require('mongoose');
 
 let contactModel = mongoose.Schema({

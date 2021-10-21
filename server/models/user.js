@@ -1,3 +1,10 @@
+/*
+    File name: user.js
+    Student: Gabriel Dias Tinoco
+    StudentID: 301160373
+    Date: 21-Oct-21
+*/
+
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
