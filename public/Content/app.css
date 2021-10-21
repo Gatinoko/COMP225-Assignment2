@@ -114,7 +114,6 @@ input[type=text] {
 
 .user-input-sections {
     width: 50%; 
-    background-color: rgb(26, 26, 26); 
-    color: rgb(255, 255, 255);
+    background-color: rgb(233, 236, 239);
     border-radius: 10px;
 }
