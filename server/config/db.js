@@ -6,5 +6,6 @@
 */
 
 module.exports = {
-    "URI": "mongodb://localhost/COMP225-Assignment2"
+    //"URI": "mongodb://localhost/COMP225-Assignment2"
+    "URI": "mongodb+srv://admin:iesu7LkNSZUoHlaK@mongodbserver.wuso0.mongodb.net/COMP225-Assignment2?retryWrites=true&w=majority"
 }
