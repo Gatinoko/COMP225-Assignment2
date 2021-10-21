@@ -1,7 +1,7 @@
 <%- include partials/head.ejs %>
 <%- include partials/main_nav.ejs %>
 
-<!-- Main  -->
+<!-- Main -->
 <main class="main-container">
 
   <!-- Jumbotron -->
@@ -14,10 +14,12 @@
 
     <!-- Required information -->
     <div class="flex-item user-input-sections" style="display: flex; flex-direction: column;">
-      <label for="contactName">Name: </label> <input class="form-control" type="text" name="contactName" style="width: auto;" value="<%= contact.name %>" required>
-      <label for="contactEmail">Email: </label> <input class="form-control" type="text" name="contactEmail" value="<%= contact.email %>" required>
-      <label for="contactNumber">Number: </label> <input class="form-control" type="tel" name="contactNumber" value="<%= contact.number %>" required>
+      <label for="contactName">Name: </label><input class="form-control" type="text" name="contactName" style="width: auto;" value="<%= contact.name %>" required>
+      <label for="contactEmail">Email: </label><input class="form-control" type="text" name="contactEmail" value="<%= contact.email %>" required>
+      <label for="contactNumber">Number: </label><input class="form-control" type="tel" name="contactNumber" value="<%= contact.number %>" required>
     </div>
+
+    <!-- Submit, cancel, and delete buttons -->
     <div style="margin: 10px 0 0 0;">
       <input class="btn btn-primary" id="SubmitButton" type="submit" value="Submit">
       <a class="btn btn-secondary" href="/users/business-contacts" role="button">Cancel</a>
@@ -25,6 +27,6 @@
     </div>
   </form>
 </main>
-  
+
 <%- include partials/footer.ejs %>  
 <%- include partials/script_declarations.ejs %>

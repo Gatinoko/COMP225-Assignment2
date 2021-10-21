@@ -4,8 +4,10 @@ let mongoose = require('mongoose');
 let passport = require('passport');
 let usersController = require('../controllers/users');
 
+// Autenthication function that checks if the user is logged in.
 function requireAuth(req, res, next) {
-    //Checks if user is logged in.
+
+    // If user isn't logged in.
     if(!req.isAuthenticated())
     {
         res.redirect('/login');
@@ -13,7 +15,7 @@ function requireAuth(req, res, next) {
     next();
 };
 
-/* GET business contacts page. */
+/* GET business contacts page and delete option. */
 router.get('/business-contacts', requireAuth, usersController.displayBusinessContactsPage);
 router.get('/business-contacts/delete/:id', requireAuth, usersController.processDeleteOption);
 
